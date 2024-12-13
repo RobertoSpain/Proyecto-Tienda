@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platzimarket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">Platzimarket</div>
+        <nav class="nav">
+                <a href="#" onclick="mostrarPaginaInicial()">Inicio</a>
+                <a href="#" onclick="mostrarCategorias()">Categorías</a>
+                <a href="#">Login</a>
+                <a href="#" onclick="mostrarCarritoCompras()">🛒 Carrito</a>
+        </nav>
+    </header>
+
+
+    <!-- Clases Hero -->
+        <section class="hero">
+            <h1>Bienvenido a Platzimarket</h1>
+            <p>Descubre los mejores productos a los mejores precios. </p>
+            <img src="img/hero.jpg">
+        </section>
+
+           <!-- Modal para mostrar detalles del producto -->
+  <div id="modal-detalle" class="modal">
+    <div class="modal-content">
+        <span class="close-button" onclick="cerrarModal()">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+  </div>
+
+        <!-- Sección Principal -->
+        <main id="app">
+            <!-- Categorias Section -->
+            <section class="categories-section">
+                <h2 style="text-align: center; margin: 2rem auto; display: block;">Explora Nuestras Categorías</h2>
+                <div id="categories-grid" class="categories-grid">
+                </div>
+            </section>
+        </main>
+        <section id="products-container" class="products-grid">
+            <!-- Aquí se mostrarán los productos -->
+            <button id="boton-cargar-mas" style="display: none;">
+                Cargar más productos
+            </button>
+            <div id="preloader" style="display: none;">
+                <p>Cargando...</p>
+            </div>
+        </section>
+        
+
+        <!-- Sección Suscríbete -->
+        <section class="subscribe">
+            <h2>¡Suscríbete a nuestro boletín!</h2>
+            <p>Recibe las mejores ofertas y novedades directamente en tu bandeja de entrada.</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Introduce tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div>
+                <h3>Ayuda</h3>
+                <a href="#">Preguntas frecuentes</a><br>
+                <a href="#">Política de envío</a>
+            </div>
+            <div>
+                <h3>Nosotros</h3>
+                <a href="#">Quiénes somos</a><br>
+                <a href="#">Blog</a>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <a href="#">Email</a><br>
+                <a href="#">Teléfono</a>
+            </div>
+            <div>
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Métodos de Pago</h3>
+                <div class="Pago">
+                    <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                    <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+                    <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
